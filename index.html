@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ecosystem</title>
+    <link href="https://fonts.googleapis.com/css?family=Oswald|Play" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+    <header class="headerImage">
+        <div class="leftContainer">
+            <div class="allContentToRight fullHeight">
+                <div class="headerMainInfo">
+                    <h1 class="headerTitle whiteShadow">Экосистема</h1>
+                    <p class="whiteShadow">Стратегическая игра</p>
+                    <!--TODO Добавить ссылки-->
+                    <a href="#getAppBlock" class="appGetButton mainColor blackShadow">Получить первым</a>
+                </div>
+            </div>
+        </div>
+        <div class="rightContainer fullHeight">
+            <div class="headerMockup">
+                <img class="imgResponsive headerImg" src="img/GameScreen.png">
+            </div>
+        </div>
+        <a class="headerDownArrow" href="#descriptionBlock">
+            <img class="arrowImg" src="img/DownArrow.svg" >
+        </a>
+    </header>
+
+    <div id="descriptionBlock">
+        <div class="descriptionBlock">
+            <div class="leftContainer">
+                <div class="textContent allContentToRight flexCentredColumn fullHeight">
+                    <h1 class="descriptionTitle whiteShadow">Планета в опасности</h1>
+                    <p class="whiteShadow">
+                        В 40% регионов наблюдается дефицит питьевой воды. Годовая норма возобновляемых энергоресурсов
+                        потребляется человечеством за месяц. По прогнозам, уже следующее поколение столкнется с массовыми
+                        болезнями и вымиранием из-за нехватки жизненно необходимых ресурсов.
+                    </p>
+                </div>
+            </div>
+            <div class="rightContainer fullHeight">
+                <div class="fullHeight flexCentredColumn">
+                    <img class="imgResponsive sideImage" src="img/EcoVsPollution.png" alt="Town timer map"/>
+                </div>
+            </div>
+        </div>
+
+        <div class="descriptionBlock">
+            <div class="leftContainer">
+                <div class="allContentToRight fullHeight flexCentredColumn">
+                    <img class="imgResponsive sideImage" src="img/Earth.png" alt="Town timer map"/>
+                </div>
+            </div>
+            <div class="rightContainer fullHeight">
+                <div class="textContent allContentToLeft flexCentredColumn fullHeight">
+                    <h1 class="descriptionTitle whiteShadow">Спасти её можешь только ты</h1>
+                    <p class="whiteShadow f-s-16">
+                        Вы всё же хотите дать шанс на будущее своим детям и собираете единомышленников, организуя
+                        экологический фонд, который может спасти планету на грани апокалипсиса. Однако люди продолжают
+                        уничтожать природу, засоряя почву, воздух и воду. Объединяя усилия волонтёров и привлекая
+                        пожертвования, вы развиваете науку, боретесь с безрассудством людей, улучшаете экологию
+                        и спасаете Землю.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="getAppBlock" class="flexCentredColumn inputBlock">
+        <div class="flexCentredRow pd-20-10">
+            <h1 class="centredText centeredBlockWidth">Хочешь получить игру?</h1>
+        </div>
+        <div class="flexCentredRow">
+            <!--TODO Добавить ссылки-->
+            <form id="betaForm" action="#" class="centeredBlockWidth">
+                <div class="flexCentredRow mg-b-10">
+                    <div class="allContentToRight fullWidth">
+                        <h2>На какое устройство хочешь игру?</h2>
+                    </div>
+                    <label class="inputText w-140">Apple
+                        <input type="radio" name="appType" value="apple"/>
+                    </label>
+                    <label class="inputText w-140">Android
+                        <input type="radio" name="appType" value="android"/>
+                    </label>
+                </div>
+                <div class="flexCentredRow">
+                    <label class="whiteShadow pd-5-20-0-0 inputText">Email</label>
+                    <input type="text" name="email" class="inputText whiteShadow fullWidth" value="" placeholder="Введите email"/>
+                    <div class="flexCentredColumn fullHeight">
+                        <button class="emailSubmitButton mainColor blackShadow whiteText" name="sendUserMail">
+                            Отправить
+                        </button>
+                    </div>
+                </div>
+                <p class="hintText pd-t-5">Мы не будем спамить, вы получите ссылку первым и успеете скачать бесплатно</p>
+                <p id="infoForAppleBeta" class="hintText pd-t-5">Чтобы получить тестовую версию для iPhone, iPad или iPod нужен
+                    email привязанные к твоему AppleId</p>
+            </form>
+        </div>
+    </div>
+
+    <div class="flexCentredColumn inputBlock">
+        <div class="flexCentredRow pd-20-10">
+            <h1 class="centredText centeredBlockWidth">Хочешь помочь?</h1>
+        </div>
+        <div class="flexCentredRow">
+            <div class="flexCentredRow fullWidth centeredBlockWidth">
+                <div class="whiteShadow pd-5-20-0-0 fullWidth">
+                    <h2>Ты можешь: </h2>
+                    <ul class="f-s-16 userHelpItems pd-l-20">
+                        <li type="disc">Помочь с дизайном игры</li>
+                        <li type="disc">Помочь с графикой для игры</li>
+                        <li type="disc">Поделиться опытом экологической деятельности</li>
+                    </ul>
+                </div>
+                <!--TODO Добавить email-->
+                <div class="flexCentredColumn fullHeight">
+                    <a class="betaSubmitButton mainColor" href="#">
+                        <p class="blackShadow whiteText pd-t-5">Напиши нам</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="flexCentredColumn inputBlock">
+        <div class="flexCentredRow pd-20-10">
+            <h1 class="centredText centeredBlockWidth">Мы в соцсетях</h1>
+        </div>
+        <div class="flexCentredRow">
+            <div class="flexCentredRow fullWidth centeredBlockWidth">
+                <div class="whiteShadow fullWidth f-s-16 flexCentredColumn mg-b-7">
+                    <p class="networkText">За новостями разработки следите в соцсетях</p>
+                </div>
+                <div class=" flexCentredRow">
+                    <!--TODO Добавить ссылки-->
+                    <a href="#"><img class="networkLogo" src="img/logo/instagram.svg"></a>
+                    <a href="#"><img class="networkLogo" src="img/logo/vk.svg"></a>
+                    <a href="#"><img class="networkLogo" src="img/logo/facebook.svg"></a>
+                    <a href="#"><img class="networkLogo" src="img/logo/twitter.svg"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="flexCentredRow">
+        <div class="footerBlock centeredBlockWidth">
+            <p class="footerText">Copyright © 2018. All rights reserved. </p>
+        </div>
+    </footer>
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="js/LinkMovement.js"></script>
+<script src="js/Main.js"></script>
+</html>
