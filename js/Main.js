@@ -14,26 +14,29 @@ $(document).ready(function() {
 
     $(document).on("click", "#sendUserMail", function () {
         const emailText = $('input[name="email"]').val();
-        console.log(emailText);
         const deviceType = $('[name="appType"]:checked').val();
-        console.log(deviceType);
 
         var dataMap = { email: emailText, deviceType: deviceType};
         var data = JSON.stringify(dataMap);
+        var settings = {
+            "async": true,
+            "crossDomain": true,
+            "url": "https://us-central1-ecosystem-7665b.cloudfunctions.net/emailReceiver",
+            "method": "POST",
+            "headers": {
+                "content-type": "application/json",
+                "cache-control": "no-cache",
+                "postman-token": "28e256ee-256b-278a-e98d-ac520f475ab1"
+            },
+            "processData": false,
+            "data": data.toString()
+        }
 
-        var xhr = new XMLHttpRequest();
-        xhr.withCredentials = true;
+        $.ajax(settings).done(function (response) {
 
-        xhr.addEventListener("readystatechange", function () {
-            if (this.readyState === 4) {
-                console.log(this.responseText);
-            }
+            console.log(response);
+        }).fail(function(data, textStatus, xhr){
+
         });
-
-        xhr.open("POST", "https://us-central1-ecosystem-7665b.cloudfunctions.net/emailReceiver");
-        xhr.setRequestHeader("content-type", "application/json");
-        xhr.setRequestHeader("cache-control", "no-cache");
-
-        xhr.send(data);
     });
 });
