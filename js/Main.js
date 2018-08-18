@@ -9,18 +9,31 @@ $(document).ready(function() {
     });
 
     $(document).on('submit', '#betaForm', function() {
-        // do your things
         return false;
     });
 
-    var addMessage = firebase.functions().httpsCallable('emailReciever');
     $(document).on("click", "#sendUserMail", function () {
         const emailText = $('input[name="email"]').val();
         console.log(emailText);
-        addMessage({email: emailText}).then(function(result) {
-            console.log("OK 200");
-        }).catch(function(error) {
-            console.log("ERROR");
+        const deviceType = $('[name="appType"]:checked').val();
+        console.log(deviceType);
+
+        var dataMap = { email: emailText, deviceType: deviceType};
+        var data = JSON.stringify(dataMap);
+
+        var xhr = new XMLHttpRequest();
+        xhr.withCredentials = true;
+
+        xhr.addEventListener("readystatechange", function () {
+            if (this.readyState === 4) {
+                console.log(this.responseText);
+            }
         });
+
+        xhr.open("POST", "https://us-central1-ecosystem-7665b.cloudfunctions.net/emailReceiver");
+        xhr.setRequestHeader("content-type", "application/json");
+        xhr.setRequestHeader("cache-control", "no-cache");
+
+        xhr.send(data);
     });
 });
