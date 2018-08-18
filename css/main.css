@@ -301,6 +301,11 @@ h1, h2, h3, p, button, a, input, label, ul, ol {
     text-align: center;
 }
 
+.inputEmailText {
+    font-size: 20px;
+    text-align: center;
+}
+
 .hintText {
     font-size: 15px;
 }
@@ -333,13 +338,19 @@ footer {
     color: #828282;
 }
 
-.pd-20-20 {
-    padding-top: 20px;
+.pd-0-10-20-10 {
+    padding-top: 0;
+    padding-right: 10px;
+    padding-left: 10px;
     padding-bottom: 10px;
 }
 
 .pd-5-20-0-0 {
     padding: 5px 20px 0 0;
+}
+
+.pd-0-10-0-10 {
+    padding: 0 7px 0 7px;
 }
 
 .mg-b-10 {
@@ -358,7 +369,7 @@ footer {
     margin-bottom: 7px;
 }
 
-.w-140 {
+.w-200 {
     width: 200px;
 }
 
@@ -473,11 +484,16 @@ input:focus, select:focus, textarea:focus, button:focus {
         display: none;
     }
 
-    .mobileHeader {
+    .mobileFullWidth {
         width: 100%;
     }
 
-    .mobileFlowCentredRow {
+    .mobileFullSize {
+        width: 100%;
+        height: 100%;
+    }
+
+    .mobileFlexCentredRow {
         display: flex;
         display: -webkit-box;
         display: -moz-box;
@@ -485,5 +501,56 @@ input:focus, select:focus, textarea:focus, button:focus {
         display: -webkit-flex;
         flex-direction: row;
         justify-content: center;
+    }
+
+    .mobileFlexCentredColumn {
+        display: flex;
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .mobileChangeRowToColumn {
+        flex-direction: column;
+    }
+
+    .mobileChangeColumnToRow {
+        flex-direction: row;
+    }
+
+    .mobileAppBlock {
+        height: 200px;
+        margin-bottom: 180px;
+    }
+
+    .mobile-h-150 {
+        height: 150px;
+    }
+
+    .mobile-h-110 {
+        height: 110px;
+    }
+
+    .mobile-h-90 {
+        height: 90px;
+    }
+
+    .mobile-w-350 {
+        width: 350px;
+    }
+
+    .mobile-p-t-10 {
+        padding-top: 10px;
+    }
+
+    .mobile-p-t-20 {
+        padding-top: 20px;
+    }
+
+    .mobile-p-l-20 {
+        padding-left: 20px;
     }
 }

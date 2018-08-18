@@ -9,8 +9,8 @@
 </head>
 <body>
     <header class="headerImage">
-        <div class="leftContainer mobileHeader">
-            <div class="allContentToRight fullHeight mobileHeader">
+        <div class="leftContainer mobileFullWidth">
+            <div class="allContentToRight fullHeight mobileFullWidth">
                 <div class="flexCentredRow fullHeight">
                     <div class="flexCentredRow fullWidth">
                         <div class="headerMainInfo">
@@ -34,12 +34,12 @@
 
     <div class="flexCentredColumn">
         <div id="descriptionBlock">
-            <div class="descriptionBlock mobileHeader">
-                <div class="leftContainer mobileHeader">
-                    <div class="mobileFlowCentredRow fullSize">
+            <div class="descriptionBlock mobileFullWidth">
+                <div class="leftContainer mobileFullWidth">
+                    <div class="mobileFlexCentredRow mobileFullSize fullHeight">
                         <div class="textContent allContentToRight flexCentredColumn fullHeight">
-                            <h1 class="descriptionTitle whiteShadow">Планета в опасности</h1>
-                            <p class="whiteShadow">
+                            <h1 class="descriptionTitle whiteShadow pd-0-10-0-10">Планета в опасности</h1>
+                            <p class="whiteShadow pd-0-10-0-10">
                                 В 40% регионов наблюдается дефицит питьевой воды. Годовая норма возобновляемых энергоресурсов
                                 потребляется человечеством за месяц. По прогнозам, уже следующее поколение столкнется с массовыми
                                 болезнями и вымиранием из-за нехватки жизненно необходимых ресурсов.
@@ -54,19 +54,19 @@
                 </div>
             </div>
 
-            <div class="descriptionBlock mobileHeader">
-                <div class="leftContainer mobileHeader">
-                    <div class="allContentToRight fullHeight flexCentredColumn mobileHeader">
-                        <div class="mobileFlowCentredRow">
+            <div class="descriptionBlock mobileFullWidth">
+                <div class="leftContainer mobileFullWidth">
+                    <div class="allContentToRight fullHeight flexCentredColumn mobileFullWidth">
+                        <div class="mobileFlexCentredRow">
                             <img class="imgResponsive sideImage h-350" src="img/Earth.png" alt="Town timer map"/>
                         </div>
                     </div>
                 </div>
-                <div class="rightContainer fullHeight mobileHeader">
-                    <div class="mobileFlowCentredRow fullSize">
+                <div class="rightContainer fullHeight mobileFullWidth">
+                    <div class="mobileFlexCentredRow mobileFullSize fullHeight">
                         <div class="textContent allContentToLeft flexCentredColumn fullHeight">
-                            <h1 class="descriptionTitle whiteShadow">Спасти её можешь только ты</h1>
-                            <p class="whiteShadow f-s-16">
+                            <h1 class="descriptionTitle whiteShadow pd-0-10-0-10">Спасти её можешь только ты</h1>
+                            <p class="whiteShadow f-s-16 pd-0-10-0-10">
                                 Вы всё же хотите дать шанс на будущее своим детям и собираете единомышленников, организуя
                                 экологический фонд, который может спасти планету на грани апокалипсиса. Однако люди продолжают
                                 уничтожать природу, засоряя почву, воздух и воду. Объединяя усилия волонтёров и привлекая
@@ -80,58 +80,69 @@
         </div>
     </div>
 
-    <div id="getAppBlock" class="flexCentredColumn inputBlock">
-        <div class="flexCentredRow pd-20-10">
+    <div id="getAppBlock" class="flexCentredColumn inputBlock mobileAppBlock">
+        <div class="flexCentredRow pd-0-10-20-10">
             <h1 class="centredText centeredBlockWidth">Хочешь получить игру?</h1>
         </div>
-        <div class="flexCentredRow">
-            <!--TODO Добавить ссылки-->
-            <form id="betaForm" action="#" class="centeredBlockWidth">
-                <div class="flexCentredRow mg-b-10">
-                    <div class="allContentToRight fullWidth">
-                        <h2>На какое устройство хочешь игру?</h2>
-                    </div>
-                    <label class="inputText w-140">Apple
-                        <input type="radio" name="appType" value="apple"/>
-                    </label>
-                    <label class="inputText w-140">Android
-                        <input type="radio" name="appType" value="android"/>
-                    </label>
-                </div>
-                <div class="flexCentredRow">
-                    <label class="whiteShadow pd-5-20-0-0 inputText">Email</label>
-                    <input type="text" name="email" class="inputText whiteShadow fullWidth" value="" placeholder="Введите email"/>
-                    <div class="flexCentredColumn fullHeight">
-                        <button id="sendUserMail" class="emailSubmitButton mainColor blackShadow whiteText" name="sendUserMail">
-                            Отправить
-                        </button>
+        <div class="flexCentredRow mobile-h-150">
+            <form id="betaForm" class="centeredBlockWidth pd-0-10-0-10">
+                <div class="mobileFlexCentredRow mobileFullSize">
+                    <div class="flexCentredRow mg-b-10 mobileChangeRowToColumn">
+                        <div class="allContentToRight fullWidth">
+                            <h2>На какое устройство хочешь игру?</h2>
+                        </div>
+                        <label class="inputText w-200 mobileFullWidth mobile-p-l-20">Apple
+                            <input type="radio" name="appType" value="apple"/>
+                        </label>
+                        <label class="inputText w-200 mobileFullWidth mobile-p-l-20">Android
+                            <input type="radio" name="appType" value="android"/>
+                        </label>
                     </div>
                 </div>
-                <p class="hintText pd-t-5">Мы не будем спамить, вы получите ссылку первым и успеете скачать бесплатно</p>
-                <p id="infoForAppleBeta" class="hintText pd-t-5">Чтобы получить тестовую версию для iPhone, iPad или iPod нужен
-                    email привязанные к твоему AppleId</p>
+                <div class="mobileFlexCentredRow mobileFullSize mobile-h-90">
+                    <div class="flexCentredRow mobileChangeRowToColumn">
+                        <label class="whiteShadow pd-5-20-0-0 inputText mobileDisable">Email</label>
+                        <input type="text" name="email" class="inputEmailText whiteShadow fullWidth mobile-w-350" value="" placeholder="Введите email"/>
+                        <div class="flexCentredColumn fullHeight mobileChangeColumnToRow mobile-p-t-10">
+                            <button id="sendUserMail" class="emailSubmitButton mainColor blackShadow whiteText" name="sendUserMail">
+                                Отправить
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="mobileFlexCentredRow mobileFullSize mobile-h-110">
+                    <div class="mobileFlexCentredColumn fullSize mobile-w-350 pd-0-10-0-10">
+                        <p class="hintText pd-t-5 mobile-w-350">Мы не будем спамить, вы получите ссылку первым и успеете скачать бесплатно</p>
+                        <p id="infoForAppleBeta" class="hintText pd-t-5 mobile-w-350">Чтобы получить тестовую версию для iPhone, iPad или iPod нужен
+                            email привязанные к твоему AppleId</p>
+                    </div>
+                </div>
             </form>
         </div>
     </div>
 
     <div class="flexCentredColumn inputBlock">
-        <div class="flexCentredRow pd-20-10">
+        <div class="flexCentredRow pd-0-10-20-10">
             <h1 class="centredText centeredBlockWidth">Хочешь помочь?</h1>
         </div>
         <div class="flexCentredRow">
-            <div class="flexCentredRow fullWidth centeredBlockWidth">
-                <div class="whiteShadow pd-5-20-0-0 fullWidth">
-                    <h2>Ты можешь: </h2>
-                    <ul class="f-s-16 userHelpItems pd-l-20">
-                        <li type="disc">Помочь с дизайном игры</li>
-                        <li type="disc">Помочь с графикой для игры</li>
-                        <li type="disc">Поделиться опытом экологической деятельности</li>
-                    </ul>
+            <div class="flexCentredRow fullWidth centeredBlockWidth pd-0-10-0-10 mobileChangeRowToColumn">
+                <div class="mobileFlexCentredRow mobileFullSize">
+                    <div class="whiteShadow pd-5-20-0-0 fullWidth mobile-w-350 pd-0-10-0-10">
+                        <h2>Ты можешь: </h2>
+                        <ul class="f-s-16 userHelpItems pd-l-20">
+                            <li type="disc">Помочь с дизайном игры</li>
+                            <li type="disc">Помочь с графикой для игры</li>
+                            <li type="disc">Поделиться опытом экологической деятельности</li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="flexCentredColumn fullHeight">
-                    <a class="betaSubmitButton mainColor" href="mailto:ecoco.game@gmail.com" title="Игра экосистема" target="_top">
-                        <p class="blackShadow whiteText pd-t-5">Напиши нам</p>
-                    </a>
+                <div class="mobileFlexCentredRow mobileFullSize">
+                    <div class="flexCentredColumn fullHeight mobile-p-t-20">
+                        <a class="betaSubmitButton mainColor" href="mailto:ecoco.game@gmail.com" title="Игра экосистема" target="_top">
+                            <p class="blackShadow whiteText pd-t-5">Напиши нам</p>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -139,20 +150,24 @@
 
 
     <div class="flexCentredColumn inputBlock">
-        <div class="flexCentredRow pd-20-10">
+        <div class="flexCentredRow pd-0-10-20-10">
             <h1 class="centredText centeredBlockWidth">Мы в соцсетях</h1>
         </div>
         <div class="flexCentredRow">
-            <div class="flexCentredRow fullWidth centeredBlockWidth">
-                <div class="whiteShadow fullWidth f-s-16 flexCentredColumn mg-b-7">
-                    <p class="networkText">За новостями разработки следите в соцсетях</p>
+            <div class="flexCentredRow fullWidth centeredBlockWidth pd-0-10-0-10 mobileChangeRowToColumn">
+                <div class="mobileFlexCentredRow mobileFullSize">
+                    <div class="whiteShadow fullWidth f-s-16 flexCentredColumn mg-b-7 mobile-w-350 pd-0-10-0-10">
+                        <p class="networkText">За новостями разработки следите в соцсетях</p>
+                    </div>
                 </div>
-                <div class=" flexCentredRow">
-                    <!--TODO Добавить ссылки-->
-                    <a href="#"><img class="networkLogo" src="img/logo/instagram.svg"></a>
-                    <a href="#"><img class="networkLogo" src="img/logo/vk.svg"></a>
-                    <a href="#"><img class="networkLogo" src="img/logo/facebook.svg"></a>
-                    <a href="#"><img class="networkLogo" src="img/logo/twitter.svg"></a>
+                <div class="mobileFlexCentredRow mobileFullSize">
+                    <div class=" flexCentredRow">
+                        <!--TODO Добавить ссылки-->
+                        <a href="#"><img class="networkLogo" src="img/logo/instagram.svg"></a>
+                        <a href="#"><img class="networkLogo" src="img/logo/vk.svg"></a>
+                        <a href="#"><img class="networkLogo" src="img/logo/facebook.svg"></a>
+                        <a href="#"><img class="networkLogo" src="img/logo/twitter.svg"></a>
+                    </div>
                 </div>
             </div>
         </div>
