@@ -14,7 +14,6 @@
                 <div class="headerMainInfo">
                     <h1 class="headerTitle whiteShadow">Экосистема</h1>
                     <p class="whiteShadow">Стратегическая игра</p>
-                    <!--TODO Добавить ссылки-->
                     <a href="#getAppBlock" class="appGetButton mainColor blackShadow">Получить первым</a>
                 </div>
             </div>
@@ -91,7 +90,7 @@
                     <label class="whiteShadow pd-5-20-0-0 inputText">Email</label>
                     <input type="text" name="email" class="inputText whiteShadow fullWidth" value="" placeholder="Введите email"/>
                     <div class="flexCentredColumn fullHeight">
-                        <button class="emailSubmitButton mainColor blackShadow whiteText" name="sendUserMail">
+                        <button id="sendUserMail" class="emailSubmitButton mainColor blackShadow whiteText" name="sendUserMail">
                             Отправить
                         </button>
                     </div>
@@ -117,9 +116,8 @@
                         <li type="disc">Поделиться опытом экологической деятельности</li>
                     </ul>
                 </div>
-                <!--TODO Добавить email-->
                 <div class="flexCentredColumn fullHeight">
-                    <a class="betaSubmitButton mainColor" href="#">
+                    <a class="betaSubmitButton mainColor" href="mailto:ecoco.game@gmail.com" title="Игра экосистема" target="_top">
                         <p class="blackShadow whiteText pd-t-5">Напиши нам</p>
                     </a>
                 </div>
@@ -150,10 +148,26 @@
 
     <footer class="flexCentredRow">
         <div class="footerBlock centeredBlockWidth">
-            <p class="footerText">Copyright © 2018. All rights reserved. </p>
+            <p class="footerText">Copyright © 2018. All rights reserved. Email: ecoco.game@gmail.com</p>
         </div>
     </footer>
 </body>
+
+<!-- Firebase App is always required and must be first -->
+<script src="https://www.gstatic.com/firebasejs/5.4.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.4.0/firebase-functions.js"></script>
+<script>
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyCuj5yMHVAtrw-w2_-IJu9e1tPGTDEEevg",
+        authDomain: "ecosystem-7665b.firebaseapp.com",
+        databaseURL: "https://ecosystem-7665b.firebaseio.com",
+        projectId: "ecosystem-7665b",
+        storageBucket: "ecosystem-7665b.appspot.com",
+        messagingSenderId: "793597328596"
+    };
+    firebase.initializeApp(config);
+</script>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="js/LinkMovement.js"></script>
