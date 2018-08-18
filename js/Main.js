@@ -1,3 +1,19 @@
+var modal = document.querySelector(".modal");
+var closeButton = document.querySelector(".close-button");
+
+function toggleModal() {
+    modal.classList.toggle("show-modal");
+}
+
+function windowOnClick(event) {
+    if (event.target === modal) {
+        toggleModal();
+    }
+}
+
+closeButton.addEventListener("click", toggleModal);
+window.addEventListener("click", windowOnClick);
+
 $(document).ready(function() {
     $('#infoForAppleBeta').css("visibility", "hidden");
     $('input[name="appType"]').on("change", function () {
@@ -15,6 +31,7 @@ $(document).ready(function() {
     $(document).on("click", "#sendUserMail", function () {
         const emailText = $('input[name="email"]').val();
         const deviceType = $('[name="appType"]:checked').val();
+        const responseTextToUser = $('#responseTextToUser');
 
         var dataMap = { email: emailText, deviceType: deviceType};
         var data = JSON.stringify(dataMap);
@@ -30,13 +47,15 @@ $(document).ready(function() {
             },
             "processData": false,
             "data": data.toString()
-        }
+        };
 
         $.ajax(settings).done(function (response) {
-
-            console.log(response);
+            toggleModal();
+            responseTextToUser.text("Рады, что вам понравилась идея! Когда игра будет готова, мы пришлём ссылку на неё");
         }).fail(function(data, textStatus, xhr){
-
+            toggleModal();
+            responseTextToUser.text("Что-то пошло не так :( Мы не смогли получить ваш email. " +
+                "Но вы можете отправить нам заявку на нашу почту ecoco.game@gmail.com");
         });
     });
 });
