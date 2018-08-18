@@ -182,6 +182,32 @@ h1, h2, h3, p, button, a, input, label, ul, ol {
     max-height: 500px;
 }
 
+@media screen and (max-height: 750px) {
+    .headerImg {
+        max-height: 450px;
+    }
+}
+
+
+@media screen and (max-height: 650px) {
+    .headerImg {
+        max-height: 350px;
+    }
+}
+
+
+@media screen and (max-height: 550px) {
+    .headerImg {
+        max-height: 250px;
+    }
+}
+
+@media screen and (max-height: 400px) {
+    .headerImg {
+        max-height: 200px;
+    }
+}
+
 .arrowImg {
     width: 60px;
 }
@@ -336,6 +362,10 @@ footer {
     width: 200px;
 }
 
+.h-350 {
+    height: 350px;
+}
+
 input[type="radio"] {
     background-color: #ddd;
     border-radius: 10px;
@@ -433,4 +463,27 @@ input:focus, select:focus, textarea:focus, button:focus {
 
 #responseTextToUser {
     padding: 10px 30px 10px 10px;
+}
+
+
+
+
+@media screen and (max-width: 800px) {
+    .mobileDisable {
+        display: none;
+    }
+
+    .mobileHeader {
+        width: 100%;
+    }
+
+    .mobileFlowCentredRow {
+        display: flex;
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        flex-direction: row;
+        justify-content: center;
+    }
 }

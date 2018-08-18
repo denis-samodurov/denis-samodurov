@@ -9,16 +9,20 @@
 </head>
 <body>
     <header class="headerImage">
-        <div class="leftContainer">
-            <div class="allContentToRight fullHeight">
-                <div class="headerMainInfo">
-                    <h1 class="headerTitle whiteShadow">Экосистема</h1>
-                    <p class="whiteShadow">Стратегическая игра</p>
-                    <a href="#getAppBlock" class="appGetButton mainColor blackShadow">Получить первым</a>
+        <div class="leftContainer mobileHeader">
+            <div class="allContentToRight fullHeight mobileHeader">
+                <div class="flexCentredRow fullHeight">
+                    <div class="flexCentredRow fullWidth">
+                        <div class="headerMainInfo">
+                            <h1 class="headerTitle whiteShadow">Экосистема</h1>
+                            <p class="whiteShadow">Стратегическая игра</p>
+                            <a href="#getAppBlock" class="appGetButton mainColor blackShadow">Получить первым</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="rightContainer fullHeight">
+        <div class="rightContainer fullHeight mobileDisable">
             <div class="headerMockup">
                 <img class="imgResponsive headerImg" src="img/GameScreen.png">
             </div>
@@ -28,41 +32,49 @@
         </a>
     </header>
 
-    <div id="descriptionBlock">
-        <div class="descriptionBlock">
-            <div class="leftContainer">
-                <div class="textContent allContentToRight flexCentredColumn fullHeight">
-                    <h1 class="descriptionTitle whiteShadow">Планета в опасности</h1>
-                    <p class="whiteShadow">
-                        В 40% регионов наблюдается дефицит питьевой воды. Годовая норма возобновляемых энергоресурсов
-                        потребляется человечеством за месяц. По прогнозам, уже следующее поколение столкнется с массовыми
-                        болезнями и вымиранием из-за нехватки жизненно необходимых ресурсов.
-                    </p>
+    <div class="flexCentredColumn">
+        <div id="descriptionBlock">
+            <div class="descriptionBlock mobileHeader">
+                <div class="leftContainer mobileHeader">
+                    <div class="mobileFlowCentredRow fullSize">
+                        <div class="textContent allContentToRight flexCentredColumn fullHeight">
+                            <h1 class="descriptionTitle whiteShadow">Планета в опасности</h1>
+                            <p class="whiteShadow">
+                                В 40% регионов наблюдается дефицит питьевой воды. Годовая норма возобновляемых энергоресурсов
+                                потребляется человечеством за месяц. По прогнозам, уже следующее поколение столкнется с массовыми
+                                болезнями и вымиранием из-за нехватки жизненно необходимых ресурсов.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="rightContainer fullHeight mobileDisable">
+                    <div class="fullHeight flexCentredColumn">
+                        <img class="imgResponsive sideImage h-350" src="img/EcoVsPollution.png" alt="Town timer map"/>
+                    </div>
                 </div>
             </div>
-            <div class="rightContainer fullHeight">
-                <div class="fullHeight flexCentredColumn">
-                    <img class="imgResponsive sideImage" src="img/EcoVsPollution.png" alt="Town timer map"/>
-                </div>
-            </div>
-        </div>
 
-        <div class="descriptionBlock">
-            <div class="leftContainer">
-                <div class="allContentToRight fullHeight flexCentredColumn">
-                    <img class="imgResponsive sideImage" src="img/Earth.png" alt="Town timer map"/>
+            <div class="descriptionBlock mobileHeader">
+                <div class="leftContainer mobileHeader">
+                    <div class="allContentToRight fullHeight flexCentredColumn mobileHeader">
+                        <div class="mobileFlowCentredRow">
+                            <img class="imgResponsive sideImage h-350" src="img/Earth.png" alt="Town timer map"/>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="rightContainer fullHeight">
-                <div class="textContent allContentToLeft flexCentredColumn fullHeight">
-                    <h1 class="descriptionTitle whiteShadow">Спасти её можешь только ты</h1>
-                    <p class="whiteShadow f-s-16">
-                        Вы всё же хотите дать шанс на будущее своим детям и собираете единомышленников, организуя
-                        экологический фонд, который может спасти планету на грани апокалипсиса. Однако люди продолжают
-                        уничтожать природу, засоряя почву, воздух и воду. Объединяя усилия волонтёров и привлекая
-                        пожертвования, вы развиваете науку, боретесь с безрассудством людей, улучшаете экологию
-                        и спасаете Землю.
-                    </p>
+                <div class="rightContainer fullHeight mobileHeader">
+                    <div class="mobileFlowCentredRow fullSize">
+                        <div class="textContent allContentToLeft flexCentredColumn fullHeight">
+                            <h1 class="descriptionTitle whiteShadow">Спасти её можешь только ты</h1>
+                            <p class="whiteShadow f-s-16">
+                                Вы всё же хотите дать шанс на будущее своим детям и собираете единомышленников, организуя
+                                экологический фонд, который может спасти планету на грани апокалипсиса. Однако люди продолжают
+                                уничтожать природу, засоряя почву, воздух и воду. Объединяя усилия волонтёров и привлекая
+                                пожертвования, вы развиваете науку, боретесь с безрассудством людей, улучшаете экологию
+                                и спасаете Землю.
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
