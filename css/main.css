@@ -563,4 +563,10 @@ input:focus, select:focus, textarea:focus, button:focus {
     .mobileSmallFullWidth {
         width: 100%;
     }
+
+    .mobileSmall-h-w-290 {
+        height: 290px;
+        max-width: 290px;
+        min-width: 290px;
+    }
 }
