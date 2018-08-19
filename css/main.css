@@ -558,3 +558,9 @@ input:focus, select:focus, textarea:focus, button:focus {
         padding: 0 20px;
     }
 }
+
+@media screen and (max-width: 370px) {
+    .mobileSmallFullWidth {
+        width: 100%;
+    }
+}
